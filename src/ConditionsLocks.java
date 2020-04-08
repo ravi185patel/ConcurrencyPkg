@@ -121,7 +121,7 @@ class Consumer implements Runnable{
     }
 }
 public class ConditionsLocks {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args){
         DataQueue dataQueue=new DataQueue();
         Producer p=new Producer(dataQueue);
         Consumer c=new Consumer(dataQueue);
