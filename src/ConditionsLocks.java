@@ -62,7 +62,7 @@ class DataQueue{
         Scenario -> Acquired lock takes more time to execute;
          */
         try{
-            System.out.println(lock.isHeldByCurrentThread()+" <consume-fair> "+lock.isFair());
+            System.out.println(lock.isHeldByCurrentThread()+" < consume-fair > "+lock.isFair());
             while(size()==0)
                 added.await();
             Integer data=getData();
