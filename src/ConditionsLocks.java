@@ -62,7 +62,7 @@ class DataQueue{
         Scenario -> Acquired lock takes more time to execute;
          */
         try{
-            System.out.println(lock.isHeldByCurrentThread()+" <consume-fair> "+lock.isFair());
+            System.out.println(lock.isHeldByCurrentThread()+" < consume-fair > "+lock.isFair());
             while(size()==0)
                 added.await();
             Integer data=getData();
@@ -121,7 +121,7 @@ class Consumer implements Runnable{
     }
 }
 public class ConditionsLocks {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args){
         DataQueue dataQueue=new DataQueue();
         Producer p=new Producer(dataQueue);
         Consumer c=new Consumer(dataQueue);
