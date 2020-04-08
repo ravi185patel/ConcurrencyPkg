@@ -122,6 +122,7 @@ class Consumer implements Runnable{
 }
 public class ConditionsLocks {
     public static void main(String[] args){
+        System.out.println("producer - consumer");
         DataQueue dataQueue=new DataQueue();
         Producer p=new Producer(dataQueue);
         Consumer c=new Consumer(dataQueue);
